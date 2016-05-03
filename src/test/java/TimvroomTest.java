@@ -1,6 +1,7 @@
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
+import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -93,6 +94,11 @@ public class TimvroomTest {
 	@Before
 	public void getBefore() {
 		PageFactory.initElements(driver, this);
+	}
+	
+	@AfterClass
+	public static void getAfterClass() {
+		driver.close();
 	}
 	
 	// Test 1
